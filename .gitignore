@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data files
+data/*.csv
+# If you have specific CSVs to keep, negate the pattern:
+# !data/important_data.csv
+
+# Log files
+*.log
+logs/
+
+# Build artifacts
+build/
+dist/
+
+# Temporary files
+temp/
+*.tmp
+
+# Environment configuration
+.env
+config.yaml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Other files to ignore
+*.bak
+*.swp
