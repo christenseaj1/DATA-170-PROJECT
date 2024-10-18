@@ -1,6 +1,6 @@
 # Tesla Stock Price Prediction
 
-This project analyzes Twitter sentiment and its impact on Tesla's stock prices. It processes tweet data, calculates sentiment scores, merges them with stock data, performs feature selection, and builds a linear regression model to predict stock prices.
+This project is part of the DATA 170 course at Roanoke College. This will be analyzing the impact of Elon Musk Tweets on Tesla's stock prices. The project processes tweet data, calculates sentiment scores, merges them with stock data, performs feature selection, and builds a linear regression model to predict stock prices.
 
 ## Features
 
@@ -14,42 +14,68 @@ This project analyzes Twitter sentiment and its impact on Tesla's stock prices. 
 
 1. **Clone the repository:**
 
-    ```bash
-    git clone https://github.com/yourusername/tesla-stock-prediction.git
-    cd tesla-stock-prediction
+    ```
+    git clone https://github.com/christenseaj1/DATA-170-PROJECT.git
+    cd DATA-170-PROJECT
     ```
 
-2. **Create a virtual environment (optional but recommended):**
+2. **Create a virtual environment (optional):**
 
-    ```bash
+    ```
     python3 -m venv venv
     source venv/bin/activate  # On Windows: venv\Scripts\activate
     ```
 
 3. **Install dependencies:**
 
-    ```bash
+    ```
     pip install -r requirements.txt
+    ```
+
+
+## Data Setup
+
+This project requires specific datasets for analysis that are **not included in the repository**. You will need to manually download the required data and place them in the `data/` folder.
+
+### Steps to Set Up the Data:
+
+1. **Create a `data/` folder** (if it doesn’t already exist). The folder should be at the root level of the repository, alongside the `src/` folder.
+
+2. **Download the following datasets** from Kaggle:
+    - [Elon Musk's Tweets Dataset](https://www.kaggle.com/datasets/marta99/elon-musks-tweets-dataset-2022)
+    - [Tesla Stock Data](https://www.kaggle.com/datasets/varpit94/tesla-stock-data-updated-till-28jun2021)
+
+3. **Save the downloaded files**:
+    - Rename the files to `cleandata.csv` (for the tweet dataset) and `TSLA.csv` (for the stock data) to match the file names expected by the script.
+
+4. **Place the files** in the `data/` folder. Your folder structure should look like this:
+    ```
+    DATA-170-PROJECT/
+    ├── data/
+    │   ├── cleandata.csv      # Cleaned tweet data
+    │   ├── TSLA.csv           # Tesla stock data
+    ├── src/
+    │   └── main.py           
+    ├── .gitignore
+    ├── README.md
+    ├── requirements.txt
+    └── venv/                 
     ```
 
 ## Usage
 
 1. **Prepare Your Data:**
-    - Download the CSV files from kaggle.com 
-    ```bash
-   https://www.kaggle.com/datasets/marta99/elon-musks-tweets-dataset-2022
-   https://www.kaggle.com/datasets/varpit94/tesla-stock-data-updated-till-28jun2021
-    ```
-    - Place your `cleandata.csv` and `TSLA.csv` files in the `data/` directory.
+    - Download and place your `cleandata.csv` and `TSLA.csv` files in the `data/` directory.
     - Ensure the CSV files have the necessary columns as expected by the scripts.
 
-2. **Run the Main Script:**
+2. **Run the Script:**
+   - From the `src/` directory, run the script:
+     ```bash
+     python main.py
+     ```
 
-    ```bash
-    python src/main.py
-    ```
+This will process the data, train the model, and display results and a plot comparison of actual vs predicted stock prices.
 
-    This will process the data, train the model, and display a plot comparing actual and predicted stock prices.
 
 ## Dependencies
 
@@ -61,18 +87,20 @@ This project analyzes Twitter sentiment and its impact on Tesla's stock prices. 
 - scikit-learn
 
 ## Project Structure
-```plaintext
-tesla-stock-prediction/
+```
+DATA-170-PROJECT/
 │
-├── data/                     # Folder for storing data files (e.g., cleandata.csv, TSLA.csv)
+├── data/                     
 │   ├── cleandata.csv
 │   ├── TSLA.csv
 │
-├── src/                      # Source code directory containing the main script
-│   └── main.py               # Main Python script for processing data and making predictions
+├── src/                      
+│   └── main.py               
 │
-├── .gitignore                # Specifies files and directories to be ignored by Git
-├── README.md                 # Project documentation
-├── requirements.txt          # Lists Python dependencies for the project
-└── venv/                     # Virtual environment (optional, if created)
+├── .gitignore               
+├── README.md                 
+├── requirements.txt         
+└── venv/                     
+```
+
 
