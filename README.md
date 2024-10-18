@@ -35,7 +35,11 @@ This project analyzes Twitter sentiment and its impact on Tesla's stock prices. 
 ## Usage
 
 1. **Prepare Your Data:**
-
+    - Download the CSV files from kaggle.com 
+    ```bash
+   https://www.kaggle.com/datasets/marta99/elon-musks-tweets-dataset-2022
+   https://www.kaggle.com/datasets/varpit94/tesla-stock-data-updated-till-28jun2021
+    ```
     - Place your `cleandata.csv` and `TSLA.csv` files in the `data/` directory.
     - Ensure the CSV files have the necessary columns as expected by the scripts.
 
@@ -57,4 +61,18 @@ This project analyzes Twitter sentiment and its impact on Tesla's stock prices. 
 - scikit-learn
 
 ## Project Structure
+```plaintext
+tesla-stock-prediction/
+│
+├── data/                     # Folder for storing data files (e.g., cleandata.csv, TSLA.csv)
+│   ├── cleandata.csv
+│   ├── TSLA.csv
+│
+├── src/                      # Source code directory containing the main script
+│   └── main.py               # Main Python script for processing data and making predictions
+│
+├── .gitignore                # Specifies files and directories to be ignored by Git
+├── README.md                 # Project documentation
+├── requirements.txt          # Lists Python dependencies for the project
+└── venv/                     # Virtual environment (optional, if created)
 
